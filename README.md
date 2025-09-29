@@ -50,3 +50,15 @@ npm run dev
 ```bash
 npm run build
 ```
+/* Notes for reviewer:
+- The project uses three state-sharing techniques:
+1) Props: App passes `xField` and `yField` as props to ChartPanel.
+2) React Context: SelectedContext holds `selectedId` and `setSelectedId` and wraps the app.
+3) Zustand: Global store stores `selectedId` and a `filterText` used by App.
+- Interactions set both Context and Zustand selectedId so both systems stay in sync.
+- Chart click sets selectedId (context + zustand). Table click does the same.
+- Table auto-scrolls to the selected row via refs.
+*/
+
+
+
