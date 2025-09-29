@@ -24,32 +24,40 @@ A single-page React + TypeScript application that:
 - Zustand for an external/global store
 
 
-## Install & Run
-1. Clone into a new repo (or create a folder and copy files)
-2. Install:
+## Steps to Run the Project
+1. Install Node.js (if you don’t have it)::
+
+Download from https://nodejs.org/
+ (LTS version recommended).
+
+Verify install:
+
+node -v
+npm -v
 
 
-```bash
+2. Clone or download the project into a folder.
+
+3. Open the project in Visual Studio Code:
+
+Open VS Code
+File > Open Folder... → select the project folder
+
+4. Install dependencies:
 npm install
-# or
-yarn
-```
 
+This reads package.json and installs React, Tailwind, Recharts, Zustand, etc.
 
-3. Start dev server:
-
-
-```bash
+5. Start the development server:
 npm run dev
-```
 
+You’ll see an output like:
 
-4. Build for production:
+VITE v5.0.0  ready in 300ms
+➜  Local:   http://localhost:5173/
 
+6. Open the local URL in your browser.
 
-```bash
-npm run build
-```
 
 Notes for reviewer:
 
@@ -60,6 +68,10 @@ Notes for reviewer:
 - Interactions set both Context and Zustand selectedId so both systems stay in sync.
 - Chart click sets selectedId (context + zustand). Table click does the same.
 - Table auto-scrolls to the selected row via refs.
+
+
+
+
 
 
 
